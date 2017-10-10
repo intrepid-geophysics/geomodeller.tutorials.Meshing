@@ -1,0 +1,9 @@
+_dfa_MeshGrid_Field_|DTM|Mansfield_17x17_DTM_GDA94_MGA55_250m|SurfaceTopography|2D|Grid/3D\ View/visible=false
+_dfa_Model_Basement/3D\ View/visible=true
+_dfa_Model_LowerMansfield/3D\ View/visible=true
+_dfa_Model_MiddleMansfield/3D\ View/visible=true
+_dfa_Model_UpperMansfield/3D\ View/visible=true
+_dfa_Model_thinBODOY/3D\ View/visible=true
+_dfa_Surface_VicFault_Nth/3D\ View/visible=true
+_dfa_Surface_VicFault_Sth/3D\ View/visible=true
+eclipse.preferences.version=1

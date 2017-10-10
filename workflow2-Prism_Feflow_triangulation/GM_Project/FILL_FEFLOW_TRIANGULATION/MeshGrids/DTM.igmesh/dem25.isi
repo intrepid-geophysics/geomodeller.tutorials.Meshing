@@ -1,0 +1,13 @@
+MetaData Begin
+	Name	= dem25.ers
+	Version	= "Intrepid GeoModeller v3.4.0 product for Windows (x64) by PELAGIAN optimised build 0b236e9a3a34+ "
+	dem25 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= dem25
+		Bands	= 1
+		Units	= "none"
+	dem25 End
+MetaData End

@@ -1,0 +1,63 @@
+MetaData Begin
+	Name	= DTM.igmesh
+	Version	= "Intrepid GeoModeller v4.0.0 geomodeller_4_0 for Windows (x64) by PELAGIAN optimised build 2d9259cadbb0 "
+	quad_Mansfield_17x17_DTM_GDA94_MGA55_250m Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= none
+		Units	= "none"
+	quad_Mansfield_17x17_DTM_GDA94_MGA55_250m End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= "MODEL"
+		Description	= "no description"
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= DTM
+		Projection	= "MGA55"
+		Datum	= "GDA94"
+		GridExtents = {
+			             69
+			             69
+			              1
+}
+		Origin = {
+			  416000.000000
+			 5880000.000000
+			              0
+}
+		Spacing = {
+			     250.000000
+			     250.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Mansfield_17x17_DTM_GDA94_MGA55_250m Begin
+				Resource	= DTM.igmesh/Mansfield_17x17_DTM_GDA94_MGA55_250m.ers
+				Name	= Mansfield_17x17_DTM_GDA94_MGA55_250m
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= none
+				NumElem	= 4761
+			Mansfield_17x17_DTM_GDA94_MGA55_250m End
+		FieldData End
+	MeshGrid End
+MetaData End

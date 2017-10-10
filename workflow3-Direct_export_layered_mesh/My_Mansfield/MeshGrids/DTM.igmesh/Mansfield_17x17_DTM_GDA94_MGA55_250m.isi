@@ -1,0 +1,15 @@
+MetaData Begin
+	Name	= Mansfield_17x17_DTM_GDA94_MGA55_250m.ers
+	Version	= "Intrepid GeoModeller v4.0.0 geomodeller_4_0 for Windows (x64) by PELAGIAN optimised build 2d9259cadbb0 "
+	Mansfield_17x17_DTM_GDA94_MGA55_250m Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= none
+		Bands	= 1
+		Projection	= "MGA55"
+		Datum	= "GDA94"
+		Units	= "none"
+	Mansfield_17x17_DTM_GDA94_MGA55_250m End
+MetaData End

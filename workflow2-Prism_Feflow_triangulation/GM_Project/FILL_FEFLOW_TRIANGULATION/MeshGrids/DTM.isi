@@ -1,0 +1,61 @@
+MetaData Begin
+	Name	= DTM.igmesh
+	Version	= "Intrepid GeoModeller v4.0.0 product for Windows (x64) by PELAGIAN optimised build 50ab8d808846 "
+	quad_dem25 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= dem25
+		Units	= "none"
+	quad_dem25 End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= "MODEL"
+		Description	= "no description"
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= DTM
+		GridExtents = {
+			            200
+			            200
+			              1
+}
+		Origin = {
+			      12.000000
+			      12.000000
+			              0
+}
+		Spacing = {
+			      25.000000
+			      25.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			dem25 Begin
+				Resource	= DTM.igmesh/dem25.ers
+				Name	= dem25
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= dem25
+				NumElem	= 40000
+			dem25 End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,43 @@
+GeomodellerTask {
+  OpenProjectNoGUI {
+    filename: "E:\\Folder_Tech_TESTING\\MESHES\\FEFLOW_Gabi_Hybird\\FILL_FEFLOW_TRIANGULATION\\FILL_FEFLOW_TRIANGULATION.xml"
+    log: "Opening project for meshing"
+  }
+}
+GeomodellerTask {
+  BuildMeshCGAL {
+    formations: true
+    faults: true
+    volumes: true
+    surfaces: true
+    draw: true
+    tetrahedrons: true
+    max_facet_radii: 250.0
+    precision: 25.0
+    min_facet_angle: 20.0
+    ratio_edges: 3.0
+    min_facet_radii: 8.0
+    max_tet_radii: 250.0
+    calcTripleLines {
+      tripleLine_precision_factor: 2.0
+      triple_point_spacing: 100.0
+      export_dir: "E:\\Folder_Tech_TESTING\\MESHES\\FEFLOW_Gabi_Hybird\\FILL_FEFLOW_TRIANGULATION"
+      borderline: true
+      insideline: true
+      borderpoint: false
+      insidepoint: false
+    }
+    smooth: 0.0
+    Export_Mesh {
+      output_directory: "E:\\Folder_Tech_TESTING\\MESHES\\FEFLOW_Gabi_Hybird\\FILL_FEFLOW_TRIANGULATION"
+      file_type: VTU
+      mesh_type: VOLUME
+    }
+    Export_Mesh {
+      output_directory: "E:\\Folder_Tech_TESTING\\MESHES\\FEFLOW_Gabi_Hybird\\FILL_FEFLOW_TRIANGULATION"
+      file_type: FEFLOW
+      mesh_type: VOLUME
+    }
+    log: "Building tetrahedrons"
+  }
+}

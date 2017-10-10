@@ -1,0 +1,53 @@
+MetaData Begin
+	Name	= CGAL.igmesh
+	Version	= "Intrepid geomodellerbatch v6.0.1 geomodeller_4_0 for Windows (x64) by PELAGIAN optimised build 2d9259cadbb0 "
+	tetra_TetrahedraRank Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= tetra
+		Alias	= Lithology
+		Units	= "Lithology"
+	tetra_TetrahedraRank End
+	tetra_TetrahedraNo Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= tetra
+		Alias	= NONE
+		Units	= "NONE"
+	tetra_TetrahedraNo End
+	MeshGrid Begin
+		Type	= unstructured-mesh
+		Dimensions	= 3
+		Purpose	= "MODEL"
+		Suffix	= ..DIR
+		Format	= iotable
+		Name	= CGAL
+		Projection	= "NUTM54"
+		Datum	= "WGS84"
+		XYZ Begin
+			Resource	= CGAL.igmesh/node..DIR
+			Primitive	= node
+			NumElem	= 65557
+		XYZ End
+		FieldData Begin
+			TetrahedraRank Begin
+				Resource	= CGAL.igmesh/tetra..DIR
+				Name	= TetrahedraRank
+				Primitive	= tetra
+				DataType	= Signed32BitInteger
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 327071
+			TetrahedraRank End
+			TetrahedraNo Begin
+				Resource	= CGAL.igmesh/tetra..DIR
+				Name	= TetrahedraNo
+				Primitive	= tetra
+				DataType	= Signed32BitInteger
+				Units	= NONE
+				Alias	= NONE
+				NumElem	= 327071
+			TetrahedraNo End
+		FieldData End
+	MeshGrid End
+MetaData End

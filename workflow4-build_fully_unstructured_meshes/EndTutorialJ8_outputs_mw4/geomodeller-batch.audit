@@ -1,0 +1,166 @@
+
+[09/10/2017 14:29:12.046000] Processing job file: "E:\Folder_Tech_TESTING\MESHES\Workflows1to4\workflow4-build_fully_unstructured_meshes\final\EndTutorialJ8_outputs_mw4\cgal.task"
+
+OpenProjectNoGUI_GMT {
+filename: "EndTutorialJ8_outputs_mw4.xml"
+}
+BuildMeshCGAL_GMT {
+mesh_criteria {
+  min_facet_angle: 10
+  min_facet_radii: 289
+  min_protect_ball_radius: 578
+  radius_edge_ratio: 2.5
+  default_discretization {
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Basement"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Cover"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Granite"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "LPalaeozoic"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "LateGranite1"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "LateGranite2"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "LateGranite3"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "MaficDyke"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Mesozoic"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Miocene"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "PalaeoMarker"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "Proterozoic"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+  formation_discretization {
+    formation: "UPalaeozoic"
+    precision: 144.5
+    max_facet_radii: 1156
+    max_tet_radii: 1156
+    max_edge_length: 1445
+  }
+}
+refine_mesh {
+  lloyd {
+    time_limit: 5
+    max_iter: 0
+    convergence: 0.02
+    freeze_bound: 0.01
+    do_freeze: true
+  }
+  perturb {
+    time_limit: 5
+    sliver_bound: 3
+  }
+  exude {
+    time_limit: 5
+    sliver_bound: 3
+  }
+}
+build_triple_lines {
+  precision: 57.8
+  point_spacing: 578
+  thin_body_bias {
+    x: 1
+    y: 1
+    z: 3
+  }
+  export_triple_lines {
+    output_directory: "E:\\Folder_Tech_TESTING\\MESHES\\Workflows1to4\\workflow4-build_fully_unstructured_meshes\\final\\EndTutorialJ8_outputs_mw4"
+    format: TripleLine_VTK
+  }
+  topolimited: true
+  borderline: true
+  insideline: true
+  divide_model_using_regular_sections: true
+}
+export_mesh {
+  output_directory: "export_mesh-vtu"
+  file_type: VTU
+  mesh_type: VOLUME
+}
+export_mesh {
+  output_directory: "export_mesh-gmod"
+  file_type: FEFLOW
+  mesh_type: VOLUME
+}
+geomodeller_output {
+  smooth: 0
+  draw_shapes: false
+  formations: true
+  faults: true
+  surfaces: true
+  volumes: true
+  tetrahedrons: true
+}
+}
+SaveProject_GMT {
+}

@@ -1,0 +1,639 @@
+PROBLEM: A new FEFLOW problem
+CLASS (v.6.211.12621)
+   2    1    0    2    1    0    8    8    0    0
+DIMENS
+    15     18      3      1      0      0      0      0      0      2     0      0      1      0      0      0      0
+SCALE
+ 3.90625000000000e+00, 5.00000000000000e+03, 1.00000000000000e+00, 1.00000000000000e+00,-0.00000000000000e+00,-0.00000000000000e+00
+NODE
+   12   10   11
+    8    4   12
+    9    3    8
+    2   15   13
+   14   13    6
+   15    9    6
+    7    9   15
+    8   12    9
+    3    9    7
+   13   14    1
+    5   11   10
+   14   11    1
+   12    6    9
+    4   10   12
+   14   12   11
+   12   14    6
+    7   15    2
+    6   13   15
+COOR
+ 6.47380233291246e+02, 3.92835569799683e+03, 5.21529003975634e+03, 3.37681240867132e+03, 6.75664504538707e+02, 2.90182962028011e+03, 4.57182286887658e+03, 4.29605122421383e+03, 4.05855983001823e+03, 2.02623845660501e+03, 6.61522368914976e+02, 2.84404875313695e+03,
+ 2.28786796564404e+03, 1.68730128152846e+03, 3.32414659086158e+03,
+ 1.48176623509137e+03, 5.48385283925129e+02, 2.52828427124746e+03, 4.89002092041053e+03, 4.49404112294606e+03, 2.62383038917400e+03, 1.53833477758630e+03, 3.70915259582900e+03, 2.57605733021073e+03, 4.69203102167830e+03, 2.98790367901872e+03, 3.81881332049915e+03,
+ 1.01507575950825e+03, 2.22513683517312e+03, 1.54112543228557e+03,
+GK_COOR
+0,0
+EXTENTS
+ 0.00000000000000e+00, 0.00000000000000e+00, 5.00000000000000e+03, 5.00000000000000e+03,
+-1.50000000000000e+01,-3.00000000000000e+01, 8.50000000000000e+01, 5.00000000000000e+01,
+FLOW_I_BC
+INIT_I_FLOW
+   0.00000000000000e+00	 1-15 
+MAT_I_FLOW
+126  0.000000e+00 "Transmissivity [max]"
+   1.000000e+00	 1-18 
+102  0.000000e+00 "Anisotropy of transmissivity"
+   1.000000e+00	 1-18 
+104  0.000000e+00 "Anisotropy angle"
+   0.000000e+00	 1-18 
+110  0.000000e+00 "Drain-/fillable porosity"
+   0.000000e+00	 1-18 
+112  0.000000e+00 "Specific storage (compressibility)"
+   1.000000e-04	 1-18 
+113  0.000000e+00 "Source/sink (fluid)"
+   0.000000e+00	 1-18 
+114  0.000000e+00 "In-transfer rate (fluid)"
+   0.000000e+00	 1-18 
+115  0.000000e+00 "Out-transfer rate (fluid)"
+   0.000000e+00	 1-18 
+TINI
+0
+STEPS2
+0,0.001,365
+GOBS
+
+GRAVITY
+  0 -1  0
+PROJGRAVITY
+-1  0
+ERROR_NORM
+2
+PHYSICS
+1,0,0,1,1,0,1,12, 1.010000e-03,0, 1.000000e-03,0,0,0,1
+OPTIONS
+  SkipMeshFill=false
+  SkipMeshDraw=false
+  BackingStore=false
+  OpaqueFringeMode=false
+  LegendViewMode=false
+  VelocityApproximationType=0
+  EquationSolverType=12
+  IterSymmType=0
+  IterNonsymmType=4
+  DirectSolverType=1
+  PreconditionSymmType=0
+  MaxNumbOrthogonal=5
+  ReorderingMethod=1
+  RecordCPU=false
+  HideVelocity=false
+  VelocityType=0
+  GeoCS=
+  SubdivisionCurvedEdges=32
+  ShowOverview=true
+  ShowMeshWindow=true
+  TimeUnit=4
+  SpatialIndexing=false
+  MinimalSliceDistance=0.1
+  UseUnsmoothVelocityField=false
+  UnsatFractureMode=1
+  ComputeIterativeSolverResiduals=0
+  SkipOutputSteps=1
+SOLVERDUMP
+  enabled=0, ascii=0, time=0, once=0
+  
+SUPERMESH
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <supermesh>
+    <nodes count="10">
+      <fixed>
+         1   647.380233291246   1481.76623509137
+         2   3928.35569799683   548.385283925129
+         3   5215.29003975634   2528.28427124746
+         4   3376.81240867132   4890.02092041053
+         5   675.664504538707   4494.04112294606
+      </fixed>
+      <linear>
+         6   2287.86796564404   1015.07575950825
+         7   4571.82286887658    1538.3347775863
+         8   4296.05122421383     3709.152595829
+         9   2026.23845660501    4692.0310216783
+        10   661.522368914976   2987.90367901872
+      </linear>
+    </nodes>
+    <polygons>
+      <polygon>
+        <nodes count="10"> 1  6  2  7  3  8  4  9  5 10 </nodes>
+      </polygon>
+    </polygons>
+  </supermesh>
+CLIENT
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <client id="wasy.fegeom" class="store">
+    <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+    <GeomStore />
+  </client>
+CLIENT
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <client id="wasy.feqt" class="doc">
+    <doc typeElementSelection="2" typeSelection3D="2" useFixDist3D="false" relativeDist3D="50">
+      <selector target="elements" operation="set" />
+      <timeStamp>00257ee502a34d8cff</timeStamp>
+      <formats>
+        <length format="g" digits="6" />
+        <time format="g" digits="6" calendar="MMM d yyyy hh:mm:ss" preferCalendar="false" />
+      </formats>
+      <customUnits>
+        <unitClass className="CARDINAL" userUnit="[]" />
+        <unitClass className="ANGLE" userUnit="[DEG]" />
+        <unitClass className="LENGTH" userUnit="[m]" />
+        <unitClass className="VOLUME" userUnit="[m^3]" />
+        <unitClass className="TIME" userUnit="[d]" />
+        <unitClass className="VELOCITY" userUnit="[m/d]" />
+        <unitClass className="INT_VELOCITY" userUnit="[m^2/d]" />
+        <unitClass className="TRANSMISSIVITY" userUnit="[m^2/d]" />
+        <unitClass className="PUMP_RATE" userUnit="[m^3/d]" />
+      </customUnits>
+      <budgets>
+        <budget key="Domain&#x1D;10006" active="false" format="g" digits="5" export="false" startTime="0" />
+        <budget key="Current Node Selection&#x1F;Singleton&#x1D;10003" active="false" format="g" digits="5" />
+        <budget key="Current Element Selection&#x1F;Singleton&#x1D;10006" active="false" format="g" digits="5" export="false" startTime="0" />
+        <budget key="Current Node Selection&#x1F;Singleton&#x1D;10006" active="false" format="g" digits="5" export="false" startTime="0" />
+        <budget key="Domain&#x1D;10003" active="false" format="g" digits="5" />
+        <budget key="Current Element Selection&#x1F;Singleton&#x1D;10003" active="false" format="g" digits="5" />
+      </budgets>
+      <subdomainTransferBudgets />
+      <fluxIntegrators>
+        <fluxIntegrator key="Current Element Selection&#x1F;Singleton" active="false" format="g" digits="5" useContVelo="true" isMaskInverted="false" />
+        <fluxIntegrator key="Current Element Selection&#x1F;Singleton&#x1D;Period" active="false" format="g" digits="5" export="false" startTime="0" />
+      </fluxIntegrators>
+      <fieldlineComputation>
+        <fieldlines thickness="1">
+          <porosity id="0" subId="" fixed="0.3" />
+          <sorption id="0" subId="" fixed="0" />
+          <rungeKutta accuracy="0.0001" maxStepsPerElement="500" maxElementSwitches="50" minStepTime="0" minStepSizeFactor="5e-12" />
+        </fieldlines>
+        <randomWalkTracks RW_method="1">
+          <diffCoeff id="0" subId="" fixed="0.00019872" />
+          <longDisp id="0" subId="" fixed="1" />
+          <transvDisp id="0" subId="" fixed="0.1" />
+        </randomWalkTracks>
+      </fieldlineComputation>
+      <views>
+        <view version="6211" key="Supermesh View" autoScaleFont="true" resolEnhancFac="1" font="Arial,7,-1,5,50,0,0,0,0,0" lightingDesired="false" showCompass="true">
+          <colorBG R="1" G="1" B="1" A="1" />
+          <magnify factor="2" />
+          <overlayItems>
+            <sizes>
+              <size item="Legend Source Name" value="1.1" />
+              <size item="Title" value="1.5" />
+              <size item="Header" value="1.3" />
+            </sizes>
+            <opacityValues>
+              <opacity item="Orientation Icon" value="0.85" />
+              <opacity item="Logo" value="0.85" />
+              <opacity item="Trademark" value="0.4" />
+            </opacityValues>
+            <visibility>
+              <visible>Orientation Icon</visible>
+              <visible>Length Scale</visible>
+            </visibility>
+          </overlayItems>
+          <legendProps>
+            <colorBG R="1" G="1" B="1" A="0.149996" />
+          </legendProps>
+          <position relDist="1.12202992055651" relOffsetX="0.0645078794515749" relOffsetY="0.0327826928360462" focalOffset="0" eyeSeparation="0">
+            <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+            <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+          </position>
+          <positionPref relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+            <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+            <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+          </positionPref>
+          <scale x="1" y="1" z="1" />
+          <text>
+            <header>00000000</header>
+            <footer>00000000</footer>
+          </text>
+          <plots>
+            <expanderItem path="Geometry" state="0" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Inner Border" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Line Elements" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Mesh Origin" state="1" checkState="0" header="317" />
+            <expanderItem path="Geometry&#x1D;Node Numbers" state="1" checkState="0" header="317" />
+            <expanderItem path="Geometry&#x1D;Outer Border" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Point Elements" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Polygon Area" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Polygon Outline" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Inner Border&#x1D;Supermesh borders" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Line Elements&#x1D;Supermesh" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Mesh Origin&#x1D;Origin" state="1" checkState="1" header="317" />
+            <expanderItem path="Geometry&#x1D;Node Numbers&#x1D;Supermesh" state="1" checkState="1" header="317" />
+            <expanderItem path="Geometry&#x1D;Outer Border&#x1D;Supermesh borders" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Point Elements&#x1D;Supermesh" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Polygon Area&#x1D;Supermesh" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Polygon Outline&#x1D;Supermesh" state="1" checkState="2" header="317" />
+          </plots>
+          <sources>
+            <source key="Geometry">
+              <styles>
+                <style key="Polygon Outline" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh" show="true" />
+                  </componentViews>
+                  <color R="0" G="0.2" B="0.2" A="1" />
+                </style>
+                <style key="Outer Border" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh borders" show="true" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="1" />
+                </style>
+                <style key="Point Elements" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh" show="true" />
+                  </componentViews>
+                  <color R="0.5" G="0" B="0" A="1" />
+                </style>
+                <style key="Node Numbers" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh" show="false" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="1" />
+                </style>
+                <style key="Polygon Area" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh" show="true" />
+                  </componentViews>
+                  <color R="0.9" G="0.9" B="0.9" A="0.5" />
+                </style>
+                <style key="Inner Border" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh borders" show="true" />
+                  </componentViews>
+                  <color R="0.4" G="0" B="0" A="1" />
+                </style>
+                <style key="Line Elements" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Supermesh" show="true" />
+                  </componentViews>
+                  <color R="0" G="0" B="0.5" A="1" />
+                </style>
+                <style key="Mesh Origin" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Origin" show="false" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="0.5" />
+                </style>
+              </styles>
+            </source>
+          </sources>
+          <autopilot fps="20" enforcePrTime="false" finalTime="10" fracTime="0" play="false">
+            <timelines>
+              <timeline key="Position">
+                <targets>
+                  <target defined="false" fracTime="0" relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+                    <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                    <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                  </target>
+                  <target defined="false" fracTime="1" relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+                    <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                    <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                  </target>
+                </targets>
+              </timeline>
+              <timeline key="Visibility">
+                <targets>
+                  <target defined="false" fracTime="0" />
+                  <target defined="false" fracTime="1" />
+                </targets>
+              </timeline>
+            </timelines>
+          </autopilot>
+          <enclosingFrame x="128" y="8" width="514" height="543" view_screen="-1" view_state="0" />
+        </view>
+        <view version="6211" key="Slice View" autoScaleFont="true" resolEnhancFac="1" font="Arial,7,-1,5,50,0,0,0,0,0" lightingDesired="false" showCompass="true" sliceNr="0">
+          <colorBG R="1" G="1" B="1" A="1" />
+          <magnify factor="2" />
+          <overlayItems>
+            <sizes>
+              <size item="Legend Source Name" value="1.1" />
+              <size item="Title" value="1.5" />
+              <size item="Header" value="1.3" />
+            </sizes>
+            <opacityValues>
+              <opacity item="Orientation Icon" value="0.85" />
+              <opacity item="Logo" value="0.85" />
+              <opacity item="Trademark" value="0.4" />
+            </opacityValues>
+            <visibility>
+              <visible>Orientation Icon</visible>
+              <visible>Simulation Time</visible>
+              <visible>Length Scale</visible>
+            </visibility>
+          </overlayItems>
+          <legendProps location="2" direction="0">
+            <colorBG R="1" G="1" B="1" A="0.149996" />
+          </legendProps>
+          <position relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+            <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+            <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+          </position>
+          <positionPref relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+            <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+            <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+          </positionPref>
+          <scale x="1" y="1" z="1" />
+          <text>
+            <header>00000000</header>
+            <footer>00000000</footer>
+          </text>
+          <plots>
+            <expanderItem path="Geometry" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head" state="0" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Edges" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Faces" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Location Markers" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Location-Connecting Line (labeled)" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Mesh Origin" state="1" checkState="0" header="317" />
+            <expanderItem path="Geometry&#x1D;Obs. Flags" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Obs. Labels" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Obs. Markers" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Vol. Labels" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Vol. Markers" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Confidence Intervals" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Continuous" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Error Bars" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Error Labels" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Fringes" state="1" checkState="0" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Isolines" state="1" checkState="0" header="317" />
+            <expanderItem path="Geometry&#x1D;Edges&#x1D;Domain / Dynamic Slice" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Faces&#x1D;Domain / Dynamic Slice" state="1" checkState="2" header="317" />
+            <expanderItem path="Geometry&#x1D;Mesh Origin&#x1D;Origin" state="1" checkState="1" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Continuous&#x1D;Domain / Dynamic Slice" state="1" checkState="2" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Fringes&#x1D;Domain / Dynamic Slice" state="1" checkState="1" header="317" />
+            <expanderItem path="Hydraulic head&#x1D;Isolines&#x1D;Domain / Dynamic Slice" state="1" checkState="1" header="317" />
+          </plots>
+          <sources>
+            <source key="Geometry">
+              <styles>
+                <style key="Volume Markers" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0" G="1" B="0" A="0.75" />
+                </style>
+                <style key="Candidate element selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.7" B="0.4" A="0.5" />
+                </style>
+                <style key="Observation-Point Flags" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Current vertical face selection" lightingDesired="false" ambientLightFraction="0.5" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.8" B="0.2" A="0.7" />
+                </style>
+                <style key="Element inspection" lightingDesired="false" ambientLightFraction="1" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0" G="0" B="0" A="1" />
+                </style>
+                <style key="Candidate vertical edge selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.9" B="0.7" A="1" />
+                </style>
+                <style key="Observation-Point Markers" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Candidate edge selection" lightingDesired="false" ambientLightFraction="0.5" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.7" B="0.4" A="0.7" />
+                </style>
+                <style key="Location-Connecting Line" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Vertical edge inspection (fancy)" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0" G="0" B="0" A="1" />
+                </style>
+                <style key="Edges" lightingDesired="false" ambientLightFraction="0.5" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Domain&#x1E;Dynamic Slice" show="true" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="0.5" />
+                </style>
+                <style key="Current node selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.8" B="0.2" A="1" />
+                </style>
+                <style key="Current vertical edge selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.8" B="0.2" A="1" />
+                </style>
+                <style key="Current edge selection" lightingDesired="false" ambientLightFraction="0.5" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.8" B="0.2" A="0.7" />
+                </style>
+                <style key="Node inspection (fancy)" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0" G="0" B="0" A="1" />
+                </style>
+                <style key="Mesh Origin" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Origin" show="false" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="0.5" />
+                </style>
+                <style key="Location Markers" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Volume Labels" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="1">
+                  <componentViews />
+                  <color R="0" G="1" B="0" A="0.75" />
+                </style>
+                <style key="Faces" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews>
+                    <componentView spaceDomainKey="Domain&#x1E;Dynamic Slice" show="true" />
+                  </componentViews>
+                  <color R="0.5" G="0.5" B="0.5" A="1" />
+                </style>
+                <style key="Current element selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.8" B="0.2" A="0.5" />
+                </style>
+                <style key="Candidate node selection" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.9" B="0.7" A="1" />
+                </style>
+                <style key="Observation-Point Labels" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="8">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Candidate vertical face selection" lightingDesired="false" ambientLightFraction="0.5" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="1" G="0.7" B="0.4" A="0.7" />
+                </style>
+              </styles>
+            </source>
+            <source key="Data&#x1D;400" state="1" format="g" digits="6">
+              <styles>
+                <style key="Continuous" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0" legendItemNumber="11" legendUpward="true" showLegend="true">
+                  <componentViews>
+                    <componentView spaceDomainKey="Domain&#x1E;Dynamic Slice" show="true" />
+                  </componentViews>
+                  <color R="1" G="1" B="1" A="0.5" />
+                </style>
+                <style key="Observation-Point Error Bars" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Fringes" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0" legendItemNumber="0" legendUpward="true" showLegend="true" isofeaturesSingleColored="false" isotype="Fixed delta" nAutoEqui="15" autoDelta="true" base="0" delta="1">
+                  <componentViews>
+                    <componentView spaceDomainKey="Domain&#x1E;Dynamic Slice" show="false" />
+                  </componentViews>
+                  <color R="1" G="1" B="1" A="0.5" />
+                  <arbitrary version="1">
+                    <title>Fringes</title>
+                    <column_header column="0">Min.</column_header>
+                    <column_header column="1">Max.</column_header>
+                    <array rows="0" columns="2" type="double" />
+                  </arbitrary>
+                </style>
+                <style key="Observation-Point Error Labels" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="10">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Observation-Point Confidence Intervals" lightingDesired="false" ambientLightFraction="0.25" brightness="1" relSize1="1" labelPosition="0">
+                  <componentViews />
+                  <color R="0.3" G="1" B="0.3" A="1" />
+                </style>
+                <style key="Isolines" lightingDesired="false" ambientLightFraction="0.75" brightness="1" relSize1="1.5" labelPosition="0" legendItemNumber="0" legendUpward="true" showLegend="true" isofeaturesSingleColored="false" isotype="Fixed delta" nAutoEqui="16" autoDelta="true" base="0" delta="1" nMinorBase="0" nMinorPerInterval="4" relSize2="0.1" ShowLabels="1" relSizeLabelText="1" relSizeLabelDistance="10" relSizeLabelOffset="2" labelsSingleColored="false" labelColorMode="">
+                  <componentViews>
+                    <componentView spaceDomainKey="Domain&#x1E;Dynamic Slice" show="false" />
+                  </componentViews>
+                  <color R="0" G="0" B="0" A="1" />
+                  <arbitrary version="1">
+                    <title>Isolines</title>
+                    <column_header column="0">Isovalue</column_header>
+                    <array rows="0" columns="1" type="double" />
+                  </arbitrary>
+                </style>
+              </styles>
+              <colorSpectrum min="0" max="0" logScaled="false" autoRange="true" noOutside="false">
+                <colorSequence piecewiseConstant="false">
+                  <colorItems>
+                    <colorItem fraction="0" R="0.5" G="0" B="0.5" A="1" />
+                    <colorItem fraction="0.2" R="0" G="0" B="1" A="1" />
+                    <colorItem fraction="0.4" R="0" G="0.75" B="0.75" A="1" />
+                    <colorItem fraction="0.6" R="0" G="1" B="0" A="1" />
+                    <colorItem fraction="0.8" R="1" G="1" B="0" A="1" />
+                    <colorItem fraction="1" R="1" G="0" B="0" A="1" />
+                  </colorItems>
+                </colorSequence>
+              </colorSpectrum>
+            </source>
+          </sources>
+          <autopilot fps="20" enforcePrTime="false" finalTime="10" fracTime="0" play="false">
+            <timelines>
+              <timeline key="Simulation Time">
+                <targets>
+                  <target defined="true" fracTime="0" fracSimTime="0" />
+                  <target defined="true" fracTime="1" fracSimTime="1" />
+                </targets>
+              </timeline>
+              <timeline key="Position">
+                <targets>
+                  <target defined="false" fracTime="0" relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+                    <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                    <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                  </target>
+                  <target defined="false" fracTime="1" relDist="1" relOffsetX="0" relOffsetY="0" focalOffset="0" eyeSeparation="0">
+                    <tilt angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                    <spin angleRad="0" axisX="0" axisY="0" axisZ="1" />
+                  </target>
+                </targets>
+              </timeline>
+              <timeline key="Visibility">
+                <targets>
+                  <target defined="false" fracTime="0" />
+                  <target defined="false" fracTime="1" />
+                </targets>
+              </timeline>
+            </timelines>
+          </autopilot>
+          <enclosingFrame x="183" y="63" width="514" height="543" view_screen="-1" view_state="0" />
+        </view>
+      </views>
+      <sceneLibrary mask="3" />
+    </doc>
+  </client>
+CLIENT
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <client id="wasy.feqt" class="maps">
+    <mapFolders>
+      <folder name="Supermesh" type="131073" id="fdr9313">
+        <items name="Points" type="131074" id="map13744" />
+        <items name="Lines" type="131074" id="map11678" />
+        <items name="Polygons" type="131074" id="map31078" />
+      </folder>
+      <expander horizontalPos="0">
+        <expanderItem path="Supermesh" state="0" header="100" />
+        <expanderItem path="Supermesh&#x1D;Lines" state="1" header="100" />
+        <expanderItem path="Supermesh&#x1D;Points" state="1" header="100" />
+        <expanderItem path="Supermesh&#x1D;Polygons" state="1" header="100" />
+        <expanderItem path="Supermesh&#x1D;Lines&#x1D;Default" state="1" header="100" />
+        <expanderItem path="Supermesh&#x1D;Points&#x1D;Default" state="1" header="100" />
+        <expanderItem path="Supermesh&#x1D;Polygons&#x1D;Default" state="1" header="100" />
+      </expander>
+    </mapFolders>
+    <maps title="FEFLOW maps" mapCount="0">
+      <smhMap smhType="0" path="" id="map13744" hiddenList="" layerCount="1" linkCount="0">
+        <layer title="Default" attributeList="&lt;No Classification&gt;" id="lyr12494" direct3D="0" opacity="50" lighting="true" brightness="60" ambientLight="50" initialized="0">
+          <style styleEntries="0" />
+        </layer>
+      </smhMap>
+      <smhMap smhType="1" path="" id="map11678" hiddenList="" layerCount="1" linkCount="0">
+        <layer title="Default" attributeList="&lt;No Classification&gt;" id="lyr10697" direct3D="0" opacity="50" lighting="true" brightness="60" ambientLight="50" initialized="0">
+          <style styleEntries="0" />
+        </layer>
+      </smhMap>
+      <smhMap smhType="2" path="" id="map31078" hiddenList="" layerCount="1" linkCount="0">
+        <layer title="Default" attributeList="&lt;No Classification&gt;" id="lyr23096" direct3D="0" opacity="50" lighting="true" brightness="60" ambientLight="50" initialized="0">
+          <style styleEntries="0" />
+        </layer>
+      </smhMap>
+    </maps>
+  </client>
+CLIENT
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <client id="wasy.feqt" class="location_sets">
+    <location_sets>
+      <location_set type="Observation Points" />
+    </location_sets>
+  </client>
+CLIENT
+  <?xml version="1.0" encoding="utf-8" standalone="no" ?>
+  <client id="wasy.feqt" class="meshgen">
+    <meshgen type="Triangle">
+      <properties count="18">
+        <property name="Quality Mesh" value="true" />
+        <property name="Forces Delaunay" value="false" />
+        <property name="Fill Holes" value="false" />
+        <property name="Delaunay Algorithms" value="Divide-and-conquer" />
+        <property name="Quiet Mode" value="true" />
+        <property name="Steiner Points Insertion" value="Allow at all borders" />
+        <property name="Minimum Angle" value="30" />
+        <property name="Mesh Anisotropy" value="1" />
+        <property name="Refine Borders" value="false" />
+        <property name="Border Gradation" value="2" />
+        <property name="Border Target Size" value="0.2" />
+        <property name="Refine Selected Edges" value="SELECTED" />
+        <property name="Refine Line-addins" value="true" />
+        <property name="Line-addin Gradation" value="3" />
+        <property name="Line-addin Target Size" value="5" />
+        <property name="Refine Point-addins" value="true" />
+        <property name="Point-addin Gradation" value="3" />
+        <property name="Point-addin Target Size" value="1" />
+      </properties>
+    </meshgen>
+  </client>
+END

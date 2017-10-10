@@ -1,0 +1,169 @@
+GeomodellerTask {
+  OpenProjectNoGUI {
+    filename: "EndTutorialJ8_outputs_mw4.xml"
+  }
+}
+GeomodellerTask {
+  BuildMeshCGAL {
+    mesh_criteria {
+      min_facet_angle: 10.0
+      min_facet_radii: 289.0
+      min_protect_ball_radius: 578.0
+      radius_edge_ratio: 2.5
+      default_discretization {
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Basement"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Cover"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Granite"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "LPalaeozoic"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "LateGranite1"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "LateGranite2"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "LateGranite3"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "MaficDyke"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Mesozoic"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Miocene"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "PalaeoMarker"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "Proterozoic"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+      formation_discretization {
+        formation: "UPalaeozoic"
+        precision: 144.5
+        max_facet_radii: 1156.0
+        max_tet_radii: 1156.0
+        max_edge_length: 1445.0
+      }
+    }
+    refine_mesh {
+      lloyd {
+        time_limit: 5.0
+        max_iter: 0
+        convergence: 0.02
+        freeze_bound: 0.01
+        do_freeze: true
+      }
+      perturb {
+        time_limit: 5.0
+        sliver_bound: 3.0
+      }
+      exude {
+        time_limit: 5.0
+        sliver_bound: 3.0
+      }
+    }
+    build_triple_lines {
+      precision: 57.8
+      point_spacing: 578.0
+      thin_body_bias {
+        x: 1.0
+        y: 1.0
+        z: 3.0
+      }
+      export_triple_lines {
+        output_directory: "E:\\Folder_Tech_TESTING\\MESHES\\Workflows1to4\\workflow4-build_fully_unstructured_meshes\\final\\EndTutorialJ8_outputs_mw4"
+        format: TripleLine_VTK
+      }
+      topolimited: true
+      borderline: true
+      insideline: true
+      divide_model_using_regular_sections: true
+    }
+    export_mesh {
+      output_directory: "export_mesh-vtu"
+      file_type: VTU
+      mesh_type: VOLUME
+    }
+    export_mesh {
+      output_directory: "export_mesh-gmod"
+      file_type: FEFLOW
+      mesh_type: VOLUME
+    }
+    geomodeller_output {
+      smooth: 0
+      draw_shapes: false
+      formations: true
+      faults: true
+      surfaces: true
+      volumes: true
+      tetrahedrons: true
+    }
+  }
+}
+GeomodellerTask {
+  SaveProject {
+  }
+}
